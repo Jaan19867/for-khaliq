@@ -3,7 +3,7 @@ import { Layout, Menu, Button, message, Switch } from 'antd';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Dashboard from './pages/Dashboard';
 import GpsMap from './pages/GpsMap';
-import Accelerometer from './pages/Accelerometer';
+
 import Environment from './pages/Environment';
 import GasConcentration from './pages/GasConcentration';
 import DataPacketFrequency from './pages/DataPacketFrequency';
@@ -234,9 +234,8 @@ function App() {
               <Menu.Item key="gps">
                 <Link to="/gps">GPS Map</Link>
               </Menu.Item>
-              <Menu.Item key="accelerometer">
-                <Link to="/accelerometer">Accelerometer</Link>
-              </Menu.Item>
+            
+              
               <Menu.Item key="environment">
                 <Link to="/environment">Environment</Link>
               </Menu.Item>
@@ -292,16 +291,7 @@ function App() {
                   />
                 }
               />
-              <Route
-                path="/accelerometer"
-                element={
-                  <Accelerometer
-                    sensorData={sensorData}
-                    isDarkMode={isDarkMode}
-                    theme={currentTheme}
-                  />
-                }
-              />
+          
               <Route
                 path="/environment"
                 element={
